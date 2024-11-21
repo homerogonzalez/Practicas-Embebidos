@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>P3 Sis Embebidos</title>
+        <script src="p3.js"></script>
+        <link rel="stylesheet" href="p3.css">
+    </head>
+    <body>
+        <h1>Control de luces de la casa</h1>
+        <p>Pulsa el botón para prender o apagar</p>
+        <div class="lamparas">
+            <div id="d1">
+                <p><img id="imagenLamp" src="focooff.png" style="width: 150px;"></p>
+                <p>Luz habitación</p>
+                <p><button onclick="document.getElementById('imagenLamp').src='focoon.png' ">Enciende</button></p>
+                <p><button onclick="document.getElementById('imagenLamp').src='focooff.png' ">Apaga</button></p>
+            </div>
+            <div id="d2">
+                <p><img id="imagenLamp2" src="focooff.png" style="width: 150px;"></p>
+                <p>Luz sala</p>
+                <p><button onclick="document.getElementById('imagenLamp2').src='focoon.png' ">Enciende</button></p>
+                <p><button onclick="document.getElementById('imagenLamp2').src='focooff.png' ">Apaga</button></p>
+            </div>
+            <div id="d3">
+                <p><img id="imagenLamp3" src="focooff.png" style="width: 150px;"></p>
+                <p>Luz patio</p>
+                <p><button onclick="document.getElementById('imagenLamp3').src='focoon.png' ">Enciende</button></p>
+                <p><button onclick="document.getElementById('imagenLamp3').src='focooff.png' ">Apaga</button></p>
+            </div>
+        </div>
+     
+    </body>
+</html>

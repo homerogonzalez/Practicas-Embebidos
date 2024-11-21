@@ -1,0 +1,71 @@
+html { /* observa que los elementos html no tienen punto antes */
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+h1 { /* observa que los elementos html no tienen punto antes */
+font-size: 1.8rem;
+color: white;
+}
+.marquesina { /* es la barra de arriba */
+overflow: hidden;
+background-color: #0A1128;
+}
+body { /* observa que los elementos html no tienen punto antes */
+margin: 0;
+}
+.contenido { /* es el contenido de cada tarjeta */
+padding: 50px;
+}
+.cuadricula-tarjeta { /* dimensiones y propiedades de la tarjeta */
+max-width: 600px;
+margin: 0 auto;
+display: grid;
+gap: 2rem;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.tarjeta {
+background-color: white;
+box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+}
+.titulo-tarjeta { /*propiedades de cada tarjeta */
+font-size: 1.2rem;
+font-weight: bold;
+color: #034078
+}
+.estado { /* propiedades del mensaje de estado de los GPIO */
+font-size: 1.2rem;
+color: #1282A2;
+}
+.switch { /* propiedades de cada switch */
+position: relative;
+display: inline-block;
+width: 120px;
+height: 68px
+}
+.deslizador {
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: #ccc;
+border-radius: 50px
+}
+.deslizador:before {
+position: absolute;
+content: "";
+height: 52px;
+width: 52px;
+left: 8px;
+bottom: 8px;
+background-color: #fff;
+-webkit-transition: .4s;
+transition: .4s;
+border-radius: 50px;
+}
+input:checked+.deslizador { /* color al deslizar ENCENDIDO */
+background-color: #b30000;
+} /* Algunas propiedades de CSS son consideradas experimentales para cierto tipo
+de navegador*/
+input:checked+.deslizador:before {
+-webkit-transform: translateX(52px); /* -Webkit es para navegador chrome */
+-ms-transform: translateX(52px); /* -ms es para Internet explorer */
+transform: translateX(52px);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Deslizables</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<div class="marquesina">
+<h1>SERVIDOR WEB EN WEMOS D1 ESP32 - CONTROL DE VARIAS SALIDAS</h1>
+</div>
+<div class="contenido">
+<div class="cuadricula-tarjeta">
+<!-- <!—CAJA PARA GPIO 2 .-->
+<div class="tarjeta">
+<p class="titulo-tarjeta"> GPIO 2</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="2">
+<span class="deslizador"></span>
+<!-- span class Asigna nombres de clases al elemento.
+Por defecto, clases CSS.-->
+</label>
+<p class="estado">Estado: <span id="2s"></span></p>
+</div>
+<!--CAJA PARA GPIO 4 .-->
+<div class="tarjeta">
+<p class="titulo-tarjeta"> GPIO 4</p>
+<label class="switch">
+    <input type="checkbox" onchange="toggleCheckbox(this)" id="4">
+<span class="deslizador"></span>
+<!-- span class Asigna nombres de clases al elemento.
+Por defecto, clases CSS.-->
+</label>
+<p class="estado">Estado: <span id="4s"></span></p>
+</div>
+<!--CAJA PARA GPIO 12 .-->
+<div class="tarjeta">
+<p class="titulo-tarjeta"> GPIO 12</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="12">
+<span class="deslizador"></span>
+<!-- span class Asigna nombres de clases al elemento.
+Por defecto, clases CSS.-->
+</label>
+<p class="estado">Estado: <span id="12s"></span></p>
+</div>
+<!--CAJA PARA GPIO 13 .-->
+<div class="tarjeta">
+<p class="titulo-tarjeta"> GPIO 13</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="13">
+<span class="deslizador"></span>
+<!-- span class Asigna nombres de clases al elemento.
+Por defecto, clases CSS.-->
+</label>
+<p class="estado">Estado: <span id="13s"></span></p>
+</div>
+</div>
+</div>
+<!--INCORPORAR IMAGEN.-->
+<script src="script.js"></script>
+<div align="center"><img src='WemosD1R32.jpg'></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BME/BMP 280 T, H, P</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset=utf-8 >
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="marquesina">
+<h1>SERVIDOR WEB ESTACIÓN METEOROLÓGICA CON SENSOR BME280 EN ESP32</h1>
+</div>
+
+<div class="contenido">
+<div class="cuadricula-tarjeta">
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-thermometer-half"
+style="color:#059e8a;"></i> Temperatura</p>
+<p class="lectura"><span id="temp"></span> &deg;C</p>
+</div>
+
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-tint"
+style="color:#00add6;"></i> Humedad</p>
+<p class="lectura"><span id="hum"></span> &percnt;</p>
+</div>
+
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-file-powerpoint"
+style="color:#e1e437;"></i> Presión</p>
+<p class="lectura"><span id="pres"></span> hpa</p>
+</div>
+
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-umbrella-beach"
+style="color:#e43737;"></i> Altura</p>
+<p class="lectura"><span id="altu"></span> Metros</p>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+<div>
+    <h2>Sistemas Embebidos - P43 aporte</h2>
+    <h2>Fernando Homero Gonzalez Anguiano</h2>
+</div>
+</body>
+</html>

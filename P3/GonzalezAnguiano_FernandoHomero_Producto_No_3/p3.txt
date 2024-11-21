@@ -1,0 +1,21 @@
+function cambiarcontenido() {
+    var elemento = document.getElementById("subtitulo");
+    elemento.innerHTML = "Tambien me llamo Fernando Anguiano";
+    alert("Se cambiará el mensaje en el HTML cuando pulses aceptar");
+}
+function FuncionMouseClic() {     
+    document.getElementById("texto1").style.color = "purple";
+}
+function FuncionMouseArriba() {
+    document.getElementById("texto1").style.color = "orange";
+}
+function FuncionMouseSobre() {
+    document.getElementById("texto2").style.fontSize = "30px";
+    document.getElementById("texto2").style.fontStyle = "italic";
+}
+
+function FuncionMouseFuera() {
+    document.getElementById("texto2").style.fontSize = "16px";
+    document.getElementById("texto2").style.fontStyle = "";
+
+}

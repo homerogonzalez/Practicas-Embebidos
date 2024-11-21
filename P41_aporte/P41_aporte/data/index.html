@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PWM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/al
+l.css" integrity="sha384-
+fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="an
+onymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- debe mantenerse el nombre stylesheet-->
+</head>
+<body>
+<div class="marquesina">
+    <h1>SERVIDOR WEB CONTROL DE INTENSIDAD POR PWM</h1>
+</div>
+<div class="contenido">
+<div class="cuadricula-tarjeta">
+<div class="tarjeta">
+<!--muestra un título para la tarjeta como en los proyectos anteriores. Contiene
+el texto "GPIO 4". -->
+<p class="titulo-tarjeta"><i class="fas fa-lightbulb"></i> GPIO 4</p>
+<p class="switch">
+    <!--Para crear un control deslizante en HTML, usa la etiqueta <input>.
+    La etiqueta <input> especifica un campo donde el usuario puede ingresar datos.
+    Existe una amplia variedad de tipos de entrada. Para definir un control deslizante,
+    use el atributo de tipo con el valor del rango.
+    En un control deslizante, también debe definir el mínimo y el máximo
+    rango usando los atributos min y max (en este caso, 0 y 100, respectivamente).
+    También necesita definir otros atributos como:
+    • el atributo de paso especifica el intervalo entre números válidos. En nuestro caso,
+    se establece en 1;
+    • la clase para diseñar el deslizador (class = "deslizador");
+    • la identificación para que podamos manipular el valor del control deslizante usando JavaScript
+    (id = "DeslizadorPWM");
+    • el atributo oninput para llamar a una función (actualizaDeslizadorPWM (this)) cuando
+    mueva el control deslizante. Esta función envía el valor actual del control deslizante a
+    través del protocolo WebSocket protocolo al cliente. La palabra clave this se refiere
+    al elemento deslizante HTML. El control deslizante está dentro de un párrafo con el
+    nombre de la clase del interruptor. Entonces, aquí están las etiquetas para
+    crear el control deslizante
+    Eventos oninput vs onchange:
+    El evento oninput ocurre cuando un elemento recibe una entrada del usuario. Este evento ocurre
+    cuando
+    se cambia el valor de un elemento <input> (arrastre el control deslizante).
+    Este evento es similar al evento onchange. La diferencia es que el evento oninput
+    ocurre inmediatamente después de que el valor de un elemento ha cambiado (el evento ocurre
+    mientras arrastra el control deslizante), mientras que onchange se produce cuando el elemento
+    pierde el foco, después de que el contenido ha sido cambiado (después de soltar el control
+    deslizante).
+    Para comprender mejor el diferencia, puedes probar ambos sentidos y ver cuál te gusta más.
+    <input type="range" oninput="actualizaDeslizadorPWM(this)" id="DeslizadorPWM" min=
+    "0" max="100" step="1" value="0" class="deslizador">
+    </p>
+    -->
+    <input type="range" oninput="updateSliderPWM(this)" id="DeslizadorPWM" min=
+    "0" max="100" step="1" value="0" class="deslizador">
+    </p>
+    <!--Por último, hay un párrafo con una etiqueta de extensión <span id = "textoValorDeslizador">
+    </span>,
+    para que podamos insertar el valor actual del control deslizante en ese párrafo. -->
+    <p class="estado">Brillantez: <span id="textoValorDeslizador"></span> &percnt;</p>
+    </div>
+    </div>
+    </div>
+    <p></p>
+    <script src="script.js"></script>
+<div>
+    <h2>Sistemas Embebidos - P41 aporte</h2>
+    <h2>Fernando Homero Gonzalez Anguiano</h2>
+</div>
+</body>
+</html>

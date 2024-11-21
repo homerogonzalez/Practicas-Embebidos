@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>P3 Sis Embebidos</title>
+        <script src="p3.js"></script>
+        <link rel="stylesheet" href="p3.css">
+        <script>
+            function cambiarcontenido() {
+                var elemento = document.getElementById("reglamento");
+                elemento.innerHTML = "Uso obligatorio de cubrebocas";
+                alert("Se cambiará al mensaje en HTML cuando pulses aceptar");
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            <h1>Sitio Web del Reglamento del salón</h1>    
+            <p id="reglamento" onclick="cambiarcontenido()">Prohibido comer en clase</p>    
+        </section>
+    </body>
+</html>

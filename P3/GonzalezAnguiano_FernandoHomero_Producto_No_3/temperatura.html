@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>P3 Sis Embebidos</title>
+        <script src="p3.js"></script>
+        <link rel="stylesheet" href="p3.css">
+    </head>
+    <body>
+        <h1>Convertidor de grados Celsius a Fahrenheit</h1>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterFtoC(this.value)" onchange="temperatureConverterFtoC(this.value)">
+        </p>
+        <p>
+            <label>Celsius</label>
+            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverterCtoF(this.value)" onchange="temperatureConverterCtoF(this.value)">
+        </p>
+        <script>
+            function temperatureConverterFtoC(valNum) {
+              valNum = parseFloat(valNum);
+              document.getElementById("inputCelsius").value=(valNum-32)/1.8;
+            }
+            function temperatureConverterCtoF(valNum) {
+              valNum = parseFloat(valNum);
+              document.getElementById("inputFahrenheit").value=(valNum*1.8)+32;
+            }
+        </script>
+    </body>
+</html>

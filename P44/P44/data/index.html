@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tabla T, H, P</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset=utf-8 >
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/al
+l.css" integrity="sha384-
+fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="an
+onymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="marquesina">
+<h1>SERVIDOR WEB ESTACIÓN METEROLÓGICA EN ESP32</h1>
+</div>
+<div class="contenido">
+<div class="cuadricula-tarjeta">
+<div class="tarjeta">
+<p class="titulo-tarjeta">Tabla de lecturas del sensor BME280 </p>
+<p>
+<table>
+<tr>
+    <th>VARIABLE</th>
+    <th>VALOR</th>
+    </tr>
+    <tr>
+    <td>Temperatura</td>
+    <td><span id="temp"></span> &deg;C</td>
+    </tr>
+    <tr>
+    <td>Humedad</td>
+    <td><span id="hum"></span> &percnt;</td>
+    </tr>
+    <tr>
+    <td>Presión</td>
+    <td><span id="pres"></span> hPa</td>
+    </tr>
+</table>
+</p>
+<p class="tiempo-actualizado">Última actualización: <span id="tiempo-actualizado"></span></p>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

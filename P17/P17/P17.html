@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> /* en CSS no se comenta con // como en C */
+/* asegura que el padding se comporte como espera */    
+* {box-sizing: border-box}
+/* contenedor de la barrita de desplazamiento */
+.contenedor {
+  width: 100%; /* ancho completo */
+  background-color: #ddd; /* color de fondo gris */
+}
+
+.propiedades {
+  text-align: right; /* alinea texto a la derecha */
+  padding-top: 10px; /* añade el padding de arriba*/
+  padding-bottom: 10px; /* añade el padding de abajo */
+  color: white; /* color blanco */
+}
+
+.html {width: 90%; background-color: #04AA6D;} /* rellena verde al cálculo de 90% */
+.css {width: 80%; background-color: #2196F3;} /* rellena azul al cálculo de 80 % */
+.js {width: 65%; background-color: #f44336;} /* rellena rojo al cálculo de 65% */
+.php {width: 60%; background-color: #808080;} /* rellena gris al cálculo de 60 %*/
+</style>
+</head>
+<body>
+
+<h1>Mis barritas desplegadoras</h1>
+
+<p>Lenguaje HTML</p>
+<div class="contenedor"> <!-- vincula con .contenedor de CSS -->
+  <div class="propiedades html">90%</div> <!-- vincula con .propiedades y con .html de CSS, 90% solo es etiqueta-->
+</div>
+
+<p>Hojas de estilo CSS</p>
+<div class="contenedor"> <!-- vincula con .contenedor de CSS -->
+  <div class="propiedades css">80%</div> <!-- vincula con .propiedades y con .css de CSS, 80% solo es etiqueta-->
+</div>
+
+<p>Lenguaje JavaScript</p>
+<div class="contenedor"> <!-- vincula con .contenedor de CSS -->
+  <div class="propiedades js">65%</div> <!-- vincula con .propiedades y con .js de CSS, 65% solo es etiqueta-->
+</div>
+
+<p>Lenguaje PHP</p>
+<div class="contenedor"> <!-- vincula con .contenedor de CSS -->
+  <div class="propiedades php">60%</div> <!-- vincula con .propiedades y con .php de CSS, 60% solo es etiqueta-->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+html {
+font-family: Arial, Helvetica, sans-serif;
+display: inline-block;
+text-align: center;
+}
+h1 {
+font-size: 1.8rem;
+color: white;
+}
+p {
+font-size: 1.4rem;
+}
+.marquesina {
+overflow: hidden;
+background-color: #0A1128;
+}
+body {
+margin: 0;
+}
+.contenido {
+padding: 50px;
+}
+.cuadricula-tarjeta {
+max-width: 800px;
+margin: 0 auto;
+display: grid;
+grid-gap: 2rem;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.tarjeta {
+background-color: white;
+box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+}
+.titulo-tarjeta {
+font-size: 1.2rem;
+font-weight: bold;
+color: #034078
+}
+th, td {
+text-align: center;
+padding: 8px;
+}
+/* Las pseudo-clases: son herramientas especiales de CSS que nos permiten referenciar
+elementosHTML por medio de sus características, como sus posiciones en el código o sus
+condiciones actuales */
+tr:nth-child(even) { /* Esta pseudo clase selecciona un element de una lista de elementos
+hermanos que se encuentra en laposición especificada por el valor entre parenthesis (even =
+impares). */
+background-color: #f2f2f2
+}
+tr:hover { /* Con la pseudo-clase hover podemos realiazar transformaciones dinámicas. Es
+agregada para aplicar un efecto de transformación cuando el ratón se encuentra sobre el elemento */
+background-color: #ddd;
+}
+th {
+background-color: #50b8b4;
+color: white;
+}
+table {
+margin: 0 auto;
+width: 90%
+}
+.tiempo-actualizado {
+font-size: 0.8rem;
+color: #1282A2;
+}

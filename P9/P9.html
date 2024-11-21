@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Ejemplo1 AJAX</title>
+<meta charset="utf-8" />
+<script>
+var solicitudAJAX = false;
+if (window.XMLHttpRequest)
+{ // si el navegador maneja solicitudes AJAX...
+solicitudAJAX = new XMLHttpRequest(); // PASO 1: Crear una solicitud objeto XMLHttpRequest
+/* El objeto XMLHttpRequest Es el que permite la comunicación asíncrona (en segundo plano)
+con el servidor.
+Asíncrona significa que pueden ocurrir unas cosas independientemente
+del flujo del programa principal The NodeJS handbook */
+}
+else if (window.ActiveXObject)
+{ // Los navegadores Internet Explorer previos
+solicitudAJAX = new ActiveXObject("Microsoft.XMLHTTP"); //necesitaban ayuda para AJAX
+}
+function pedirDatos(fuenteDatos, nombreDe_id)
+{
+if(solicitudAJAX)
+{ // Si hay una solicitud AJAX ...
+var objetoVinculador = document.getElementById(nombreDe_id); // vincula JavasCript con HTML mediante el id
+solicitudAJAX.open("GET", fuenteDatos); // PASO 2: Abrir solicitud al servidor con método GET
+solicitudAJAX.onreadystatechange = function()
+{ // PASO 3: Esperando una respuesta (se crea una función para manejarla con la respuesta)
+if (solicitudAJAX.readyState == 4 && solicitudAJAX.status == 200)
+{ // PASO 4: Si hubo respuesta favorable...
+objetoVinculador.innerHTML = solicitudAJAX.responseText; // se responde o ejecuta la
+//respuesta
+}
+}
+solicitudAJAX.send(null); // PASO 5: Enviar la solicitud
+}
+}
+</script>
+</head>
+<body>
+<H1>Mostrando datos con AJAX</H1>
+<form>
+<input type = "button" value = "Mostrar mensaje" onclick =
+"pedirDatos('datos.txt','espacioParaTexto')">
+</form>
+<div id="espacioParaTexto" style="background-color:#99FF66;">
+<p>Aquí aparecerá le texto que se cambiará</p>
+</div>
+</body>
+</html>

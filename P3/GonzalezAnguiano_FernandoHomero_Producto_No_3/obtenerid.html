@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>P3 Sis Embebidos</title>
+        <script src="p3.js"></script>
+        <link rel="stylesheet" href="p3.css">
+        <script>
+            function iniciar() {
+            var elemento = document.getElementById("reglamento");
+            alert("El id en HTML es: " + elemento.id); // "El id es:subtitulo"
+            }
+        </script>
+    </head>
+    <body onload="iniciar()">
+        <section>
+            <h1>Sitio Web del Reglamento del salón</h1>    
+            <p id="reglamento">Prohibido comer en clase</p>    
+        </section>
+    </body>
+</html>
+

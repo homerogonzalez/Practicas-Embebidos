@@ -1,0 +1,37 @@
+.envoltura {
+max-width: 600px;
+margin: 0 auto;
+display: grid; /* se establece el layout como cuadrícula, La propiedad display establece el
+elemento cuadricula-tarjeta como un contenedor de cuadrícula (grid). */
+gap: 2rem; /* gap controla espacios entre filas y columnas */
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* La propiedad grid-template-
+columns establece el ancho de las columnas de la cuadrícula, repeat aplica la misma configuración a
+
+todas las columnas. El minmax (200px, 1fr) significa que el ancho de las columnas se ajustará al
+tamaño de la ventana del navegador para un mínimo de 200px. El 1fr le permite establecer el tamaño
+de una pista como una fracción del espacio libre del contenedor de la cuadrícula. */
+}
+.uno {
+background-color: orange;
+}
+.dos {
+background-color: rgb(103, 103, 200);
+text-align: center;
+}
+.tres {
+background-color: rgb(130, 177, 116);
+text-align: center;
+}
+.cuatro {
+background-color: rgb(232, 50, 201);
+text-align: center;
+}
+.cinco {
+background-color: rgb(214, 152, 152);
+text-align: center;
+}
+.seis {
+background-color: cyan;
+text-align: center;
+}

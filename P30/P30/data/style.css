@@ -1,0 +1,99 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    }
+    h1 {
+    font-size: 1.8rem; /* La unidad rem para el tamaño de fuente es relativa al tamaño de fuente
+    del elemento raíz. Esto significa que el tamaño de fuente es 1,8 veces
+    mayor que el tamaño predeterminado utilizado por el navegador.
+    */
+    color: white;
+    }
+    .barra {
+    /*
+    El div barra contiene el texto WEB SERVER CON BOTONES.
+    es un poco más grande que la fuente predeterminada del título 1.
+    */
+    overflow: hidden; /* Configura el desbordamiento propiedad oculta de esta manera.*/
+    background-color: #204a8f;
+    /* Se estiliza el color de fondo de barra usando la propiedad background-color.
+    Usted puede elegir cualquier color de fondo, estamos usando #204a8f. */
+    }
+    body {
+    margin: 0;
+    }
+    .contenido {
+    /* Aquí se agrega algo de relleno al div de contenido, para que
+    la cuadrícula de la tarjeta no se contraiga a los márgenes
+    del cuerpo. */
+    padding: 50px;
+    }
+    .cuadriculaentarjeta {
+    max-width: 800px; /* La propiedad de ancho máximo max-width, como su nombre indica,
+    establece el ancho máximo de la cuadrícula.
+    Para colocar todo alineado en el centro, establezca el margen en 0 automático. */
+    margin: 0 auto; /* Al establecer la propiedad de margen en 0, se centra automáticamente
+    la división dentro de su contenedor principal. Es lo mismo que establecer
+    los márgenes superior e inferior en cero y los márgenes izquierdo y derecho
+    en automático. El navegador distribuye automáticamente la cantidad correcta
+    de margen a cada lado. */
+    display: grid; /* La propiedad de visualización display establece el elemento .cuadriculaen
+    tarjeta como un contenedor de cuadrícula. */
+    grid-gap: 2rem; /* La grid-gap define el espacio entre cada celda de la cuadrícula (cuadro);
+    en este caso, solo tenemos una celda de la cuadrícula. */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* La propiedad grid-template-
+column
+
+establece el ancho de las columnas.
+La repetición significa que aplicará la misma configuración a todas las columnas.
+El minmax (200px, 1fr) significa que el ancho de las columnas se ajusta al tamaño
+de la ventana del navegador a un mínimo de 200px.
+El 1fr le permite establecer el tamaño de una pista como una fracción del espacio
+libre del contenedor de la cuadrícula. Por ejemplo, si tuviera tres tarjetas, establecería cada
+elemento en un tercio del ancho del contenedor de la cuadrícula. Por el momento, es posible
+que
+esto no se note porque solo estamos usando una celda de la cuadrícula; se comprenderá mejor
+cómo
+esto funciona cuando agregamos más tarjetas en proyectos futuros.
+*/
+}
+.tarjeta { /*Tarjeta donde se incluyen los botones*/
+background-color: rgb(102, 160, 145);
+box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, 0.459);
+/*
+El color de fondo de la tarjeta se establece en verde,
+pero puede usar cualquier otro color.
+La propiedad box-shadow adjunta una o más sombras al elemento.
+Esto es lo que significa cada valor de izquierda a derecha:
+• offset-x: distancia horizontal;
+• offset-y: distancia vertical;
+• radio de desenfoque: cuanto mayor sea este valor, mayor será el desenfoque,
+por lo que la sombra se vuelve más grande y más clara;
+• spread-radius: los valores positivos harán que la sombra se expanda y crezca,
+los valores negativos harán que la sombra se encoja.
+• color: estamos usando el código de color RGBA. RGBA significa alfa rojo,
+verde, azul. La alpha corresponde a la opacidad del color.
+*/
+}
+.estado { /*aplica estilo al párrafo que muestra el estado:
+el color y el tamaño de fuente propiedades. */
+font-size: 1.2rem;
+color: #191a1a;
+}
+button { /*para agrandar el tamaño de los botones */
+border: none;
+color: #FEFCFB;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+width: 200px;
+border-radius: 4px;
+transition-duration: 0.4s; /* una breve transisción */
+}
+.button-on { /* color del botón de encendido */
+    background-color: #034078;
+    }
+    .button-off { /* color del botón de apagado */
+    background-color: #858585;
+    }

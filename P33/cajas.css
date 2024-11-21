@@ -1,0 +1,42 @@
+.envoltura {
+display: grid; /* se establece despliegue en forma de cuadrícula */
+grid-template-columns: repeat(3, 1fr); /* se forman 3 columnas en la cuadrícula*/
+grid-gap: 10px; /* controla los espacios entre las cajas */
+grid-auto-rows: minmax(100px, auto); /* renglones de mínimo 100 px*/
+}
+.uno {
+grid-column: 1 / 3; /* desde inicio de col1 hasta inicio de col3, pero la col2 será tapada por la caja
+2*/
+grid-row: 1; /* solo en reng 1 */
+background-color: orange;
+}
+.dos {
+grid-column: 2 / 4; /* desde inicio de col 2 hasta inicio de col 4 */
+grid-row: 1 / 3; /* desde inicio de reng 1 hasta inicio de reng 3*/
+background-color: rgb(103, 103, 200);
+text-align: center;
+}
+.tres {
+grid-column: 1; /* solo en la col 1 */
+grid-row: 2 / 5; /* desde inicio de reng 2 hasta inicio de reng 5 */
+background-color: rgb(130, 177, 116);
+text-align: center;
+}
+.cuatro {
+grid-column: 3; /* solo en col 3 */
+grid-row: 3; /* solo en reng 3 */
+background-color: rgb(232, 50, 201);
+text-align: center;
+}
+.cinco {
+grid-column: 2; /*solo en col 2 */
+grid-row: 4; /*solo en reng 4 */
+background-color: rgb(214, 152, 152);
+text-align: center;
+}
+.seis {
+grid-column: 3; /*solo en col 3 */
+grid-row: 4; /* solo en reng 4*/
+background-color: cyan;
+text-align: center;
+}

@@ -1,0 +1,31 @@
+.banner{
+    background-color: #6a5acd; padding: 20px 0; text-align: center; font-size:20px; color: white;
+}
+body{
+    background-color: #dfcff3;
+}
+.descripcion{
+    font-size: 20px;
+}
+.descripcion p{
+    font-size: 25px; color: #6a5acd; text-align: center;
+}
+body main div ul{
+    display:inline-block; vertical-align: top; width: 25%;margin-right: 15%;
+}
+body main div ul h1{
+    font-size: 30px; color: #6a5acd;
+}
+.fotoProducto{
+    height: 30%; width: 30%; margin-top: 10px; margin:10px; padding:10px; border:2px; border-style: solid;
+}
+.specs{
+    font-family: 'Courier New', Courier, monospace; font-weight: bold;
+    width: 1000px; height: 400px; padding: 15px; border:5px #6a5acd; margin: 30px; border-style: solid;
+}
+.cajas button{
+    background-color: #514283; margin:20px; padding: 50px; font-size: 30px; color:white;
+}
+#tabla{
+    background-color: #cac5ed; margin: 15px;
+}

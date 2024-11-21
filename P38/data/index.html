@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salidas con Websockets</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/al
+l.css" integrity="sha384-
+fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="an
+onymous">
+</head>
+<body>
+<div class="marquesina">
+<h1>SERVIDOR WEB MULTIPLES SALIDAS MEDIANTE WEBSOCKETS EN ESP32</h1>
+</div>
+<div class="contenido">
+<div class="cuadricula-tarjeta">
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-lightbulb"></i> GPIO 4</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="4">
+<span class="deslizador"></span>
+</label>
+<p class="estado">Estado: <span id="4s"></span></p>
+</div>
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-lightbulb"></i> GPIO 5 (Pin 3 Wemos D1)</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="5">
+<span class="deslizador"></span>
+</label>
+<p class="estado">Estado: <span id="5s"></span></p>
+</div>
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-lightbulb"></i> GPIO 12</p>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" id="12">
+<span class="deslizador"></span>
+</label>
+<p class="estado">Estado: <span id="12s"></span></p>
+</div>
+<div class="tarjeta">
+<p class="titulo-tarjeta"><i class="fas fa-lightbulb"></i> GPIO 13 (pin 7 Wemos D1)</p>
+<label class="switch">
+    <input type="checkbox" onchange="toggleCheckbox(this)" id="13">
+<span class="deslizador"></span>
+</label>
+<p class="estado">Estado: <span id="13s"></span></p>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

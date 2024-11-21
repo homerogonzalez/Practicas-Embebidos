@@ -1,0 +1,56 @@
+/* Los estilos son los mismos que se usaron en los proyectos anteriores con
+ligeras diferencias */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.marquesina {
+    overflow: hidden;
+    background-color: #0A1128;
+}
+
+body {
+    margin: 0;
+}
+
+.contenido {
+    padding: 5%;
+}
+
+.cuadricula-tarjeta {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.tarjeta {
+    background-color: white;
+    box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+}
+
+.titulo-tarjeta {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #034078
+}
+
+/*
+    Formatea el contenido del gráfico con un poco de relleno a la izquierda
+    y a la derecha. */
+.grafica-contenido {
+    padding-right: 5%;
+    padding-left: 5%;
+}

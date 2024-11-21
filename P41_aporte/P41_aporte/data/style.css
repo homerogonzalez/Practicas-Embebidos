@@ -1,0 +1,99 @@
+/* Utilizamos los mismos estilos que se utilizaron en proyectos anteriores.
+Se han agreado nuevas instrucciones para formatear el rango del control
+deslizante */
+html {
+font-family: Arial, Helvetica, sans-serif;
+display: inline-block;
+text-align: center;
+background-color: black;
+}
+h1 {
+font-size: 1.8rem;
+color: #0b0e0f;
+}
+h2 {
+font-size: 1.8rem;
+color: #53fc18;
+}
+p {
+font-size: 1.4rem;
+}
+.marquesina {
+overflow: hidden;
+background-color: #53fc18;
+}
+body {
+margin: 0;
+}
+.contenido {
+padding: 30px;
+}
+.cuadricula-tarjeta {
+max-width: 700px;
+margin: 0 auto;
+display: grid;
+grid-gap: 2rem;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.tarjeta {
+background-color: #191b1f;
+box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+}
+.titulo-tarjeta {
+font-size: 1.2rem;
+font-weight: bold;
+color: white
+}
+.estado {
+    font-size: 1.2rem;
+color: white;
+}
+.deslizador {
+-webkit-appearance: none;
+/* Establecer -webkit-apariencia en ninguno (none) anula los estilos CSS
+predeterminados aplicados al deslizador */
+margin: 0 auto;
+/*
+Establecer el margen en 0 alinea automáticamente el control deslizante
+dentro de su contenedor principal */
+width: 100%;
+/*El ancho del control deslizante se establece en 100% y la altura
+en 15px. */
+height: 15px;
+border-radius: 10px;
+/* El radio del borde es establecido en 10px. */
+background: #21650a;
+/* Establece el color de fondo para el control deslizante */
+outline: none;
+/* establece el contorno en ninguno. */
+}
+/*
+Establece las propiedades de apariencia de -webkit en none para anular
+las propiedades predeterminadas
+*/
+.deslizador::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 30px;
+/*
+Establece un ancho, alto y radio de borde específicos para el controlador.
+Establece lo mismo ancho y alto con un radio de borde del 50% crea un círculo */
+height: 30px;
+border-radius: 50%;
+background: #53fc18;
+cursor: pointer;
+}
+/*Luego, formatea el control deslizante. Utiliza -webkit- para Chrome, Opera, Safari y Edge
+navegadores web y -moz- para Firefox */
+.deslizador::-moz-range-thumb
+{
+width: 30px;
+height: 30px;
+border-radius: 50% ;
+background: #53fc18;
+cursor: pointer;
+}
+.switch {
+padding-left: 5%;
+padding-right: 5%;
+}

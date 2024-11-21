@@ -1,0 +1,86 @@
+html { /* observa que los elementos html no tienen punto antes */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    }
+    h1 { /* observa que los elementos html no tienen punto antes */
+    font-size: 1.8rem;
+    color: white;
+    }
+    .marquesina { /* es la barra de arriba */
+    overflow: hidden; /* overflow especifica cómo será mostrado el contenido que desborda a la caja
+    marquesina.Con la propiedad hiden esconde el contenido que no entra dentro de la caja */
+    background-color: #0A1128;
+    }
+    body { /* observa que los elementos html no tienen punto antes */
+    margin: 0;
+    }
+    .contenido { /* es el contenido de cada tarjeta */
+    padding: 50px;
+    }
+    .cuadricula-tarjeta { /* dimensiones y propiedades de la tarjeta */
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid; /* se establece el layout como cuadrícula, La propiedad display establece el
+    elemento cuadricula-tarjeta como un contenedor de cuadrícula (grid). */
+    gap: 2rem; /* gap controla espacios entre filas y columnas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* La propiedad grid-template-columns
+    establece el ancho de las columnas de la cuadrícula, repeat aplica la misma configuración a todas las
+    columnas. El minmax (200px, 1fr) significa que el ancho de las columnas se ajustará al tamaño de la ventana
+    del navegador para un mínimo de 200px. El 1fr le permite establecer el tamaño de una pista como una
+    fracción del espacio libre del contenedor de la cuadrícula. */
+    }
+    .tarjeta { /*propiedades de cada tarjeta */
+    background-color: white;
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    }
+    .titulo-tarjeta { /* título de cada tarjeta */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #034078
+    }
+    .estado { /* propiedades del mensaje de estado de los GPIO */
+    font-size: 1.2rem;
+    color:#1282A2;
+    }
+    .switch { /* propiedades de cada switch */
+    position: relative; /* en este caso es con color gris cuando NO está habilitado */
+    display: inline-block;
+    width: 120px;
+    height: 68px
+    }
+    .deslizador { /* El cambio en sí mismo es creado usando el pseudo elemento :before para color de
+    fondo cuando el cambio es habilitado y el switch blanco (círculo que se mueve sobre el deslizador */
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 50px
+    }
+    .deslizador:before { /* Estiliza el círculo que se mueve en el deslizador */
+    position: absolute; /* posicionamiento absoluto */
+    content: "";
+    height: 52px;
+    width: 52px;
+    left: 8px; /* se establecen bordes con left (izquierda) y bottom (abajo), border-radius y la
+    transición para cuando se hace clic al mover el deslizador */
+    bottom: 8px;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50px; /* width (ancho) y height (alto) con un border radius crea un círculo*/
+    }
+    input:checked+.deslizador { /* color al deslizar ENCENDIDO */
+    background-color: #b30000;
+    }
+    input:checked+.deslizador:before { /* Se aplican las siguientes propiedades para que el switch se
+    mueva de posición cuando se desplaza el deslizador y cuando se regresa a su posición original */
+    /* Algunas propiedades de CSS son consideradas experimentales para cierto tipo
+    de navegador*/
+    -webkit-transform: translateX(52px); /* -Webkit es para navegador chrome */
+    -ms-transform: translateX(52px); /* -ms es para Internet explorer */
+    transform: translateX(52px);
+    }
+    img
+    {
+    width: 100%; /* probar eliminando este fragmento de código para ver lo responsivo */
+    height: auto;
+    max-width: 800px;
+    }

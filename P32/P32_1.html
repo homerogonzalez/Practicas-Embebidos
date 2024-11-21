@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Escuchador de eventos</title>
+<script>
+function agregarevento() {
+var elemento = document.querySelector("section > button");
+elemento.addEventListener("click", mostrarmensaje);
+}
+function mostrarmensaje() {
+alert("Presionó el botón");
+}
+window.addEventListener("load", agregarevento);
+</script>
+</head>
+<body>
+<section>
+<h1>Método addEventListener para detectar cuando se pulsa un botón</h1>
+<button type="button">Mostrar</button>
+</section>
+</body>
+</html>

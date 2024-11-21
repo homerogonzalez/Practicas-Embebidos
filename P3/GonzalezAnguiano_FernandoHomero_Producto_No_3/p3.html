@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>P3 Sis Embebidos</title>
+        <script src="p3.js"></script>
+        <link rel="stylesheet" href="p3.css">
+        <script>
+            function saluda()
+            {
+                alert("Hola a todos");
+            }
+        </script>
+    </head>
+    <body>
+        <header style="background-color: #BBBBBB; padding: 20px 0; text-align: center;">
+            <h1>Materia de Sistemas Embebidos</h1>
+        </header>
+        <main>
+            <p>Pulsa este botón para desplegar mensaje</p>
+            <input type="button" onclick="saluda()" value="Saludar"/>
+            <hr>
+            <script>
+                document.write("Hola a todos, probando document.write");
+            </script>
+            <hr>
+            <h1>Fecha y hora en Cd. Obregón</h1>
+            <p id="FecYHor"></p>
+            <script>
+                var fechahora_de_hoy = new Date();
+                document.getElementById("FecYHor").innerHTML = fechahora_de_hoy;
+            </script>
+            <hr>
+            <h1>Cambiar el color del texto</h1>
+            <p id="texto">Este texto cambiará de color</p>
+            <p><button onclick="document.getElementById('texto').style.color='red'">Texto en rojo</button></p>
+            <p><button onclick="document.getElementById('texto').style.color='blue'">Texto en azul</button></p>
+            <p><button onclick="document.getElementById('texto').style.textAlign='center'">Centrar el texto</button></p>
+            <p><button onclick="document.getElementById('texto').style.display='none'">Esconder texto</button></p>
+            <p><button onclick="document.getElementById('texto').style.display='block'">Muestra texto</button></p>
+            <hr>
+            <h1>Control de luces de la casa</h1>
+            <p>Pulsa el botón para prender o apagar</p>
+            <div class="lamparas">
+                <div id="d1">
+                    <p><img id="imagenLamp" src="focooff.png" style="width: 150px;"></p>
+                    <p>Luz habitación</p>
+                    <p><button onclick="document.getElementById('imagenLamp').src='focoon.png' ">Enciende</button></p>
+                    <p><button onclick="document.getElementById('imagenLamp').src='focooff.png' ">Apaga</button></p>
+                </div>
+                <div id="d2">
+                    <p><img id="imagenLamp2" src="focooff.png" style="width: 150px;"></p>
+                    <p>Luz sala</p>
+                    <p><button onclick="document.getElementById('imagenLamp2').src='focoon.png' ">Enciende</button></p>
+                    <p><button onclick="document.getElementById('imagenLamp2').src='focooff.png' ">Apaga</button></p>
+                </div>
+                <div id="d3">
+                    <p><img id="imagenLamp3" src="focooff.png" style="width: 150px;"></p>
+                    <p>Luz patio</p>
+                    <p><button onclick="document.getElementById('imagenLamp3').src='focoon.png' ">Enciende</button></p>
+                    <p><button onclick="document.getElementById('imagenLamp3').src='focooff.png' ">Apaga</button></p>
+                </div>
+            </div>
+            <hr>
+            <h2>Mensaje cambiado por ID</h2>
+            <p id="subtitulo" onclick="cambiarcontenido()">Pulsa aquí: Homero González</p>
+            <hr>
+            <h1>Convertidor de grados Celsius a Fahrenheit</h1>
+            <p>
+                <label>Fahrenheit</label>
+                <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterFtoC(this.value)" onchange="temperatureConverterFtoC(this.value)">
+            </p>
+            <p>
+                <label>Celsius</label>
+                <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverterCtoF(this.value)" onchange="temperatureConverterCtoF(this.value)">
+            </p>
+            <script>
+                function temperatureConverterFtoC(valNum) {
+                  valNum = parseFloat(valNum);
+                  document.getElementById("inputCelsius").value=(valNum-32)/1.8;
+                }
+                function temperatureConverterCtoF(valNum) {
+                  valNum = parseFloat(valNum);
+                  document.getElementById("inputFahrenheit").value=(valNum*1.8)+32;
+                }
+            </script>
+            <hr>
+            <p id="texto1" onmousedown="FuncionMouseClic()" onmouseup="FuncionMouseArriba()">Haz clic y el texto se volverá MORADO, libera y se volverá
+                NARANJA.</p>
+            <p id="texto2" onmouseover="FuncionMouseSobre()" onmouseout="FuncionMouseFuera()">Mueve el mouse sobre este texto y se volverá más
+                grande e italico.</p>
+            <hr>
+        </main>
+        <footer style="background-color: #BBBBBB; padding: 20px 0; text-align: center;">
+            <h3>Gracias por su atención</h3>
+            <h3>Producto 3 JavaScript     Sistemas Embebidos</h3>
+            <h3>Fernando Homero González Anguiano</h3>
+        </footer>
+
+</html>
